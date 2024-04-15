@@ -95,6 +95,11 @@ class LoL_char {
     // 조건 2. 적군 체력이 0 이하가 아니라면 공격을 성공적으로 수행합니다.
     // 공격 정책 수식 : 적군 체력 -= 아군 유닛 공격력 / 적군 유닛 방어력
     //TODO:
+
+    if (enemy[2] <= 0) {
+      return;
+    }
+
     System.out.println("----------------------------------");
     System.out.println("[안내] [" + this.name + "] 유닛이 [공격] 하였습니다.");
     enemy[2] -= me_info_int[0] / enemy[1];

@@ -11,11 +11,11 @@ public class TextRpgGameApplication {
         displayWelcomeMessage();
 
         // 플레이어1 정보 입력 및 생성
-        Player player1 = createPlayer();
+        Player player1 = createPlayer(ME_PLAYER_INPUT_GUIDE_MESSEAGE);
         // 플레이어1 정보 출력
         displayPlayerInformation(player1);
         // 플레이어2 정보 입력 및 생성
-        Player player2 = createPlayer();
+        Player player2 = createPlayer(ANOTHER_PLAYER_INPUT_GUIDE_MESSEAGE);
         // 플레이어2 정보 출력
         displayPlayerInformation(player2);
         // 게임 시작
@@ -31,8 +31,8 @@ public class TextRpgGameApplication {
         System.out.println("[안내] TRPG 스타크래프트 게임을 시작합니다.");
     }
 
-    private static Player createPlayer() {
-        System.out.println(ME_PLAYER_INPUT_GUIDE_MESSEAGE);
+    private static Player createPlayer(String str) {
+        System.out.println(str);
 
         System.out.printf("[시스템] 유닛 [이름]을 입력해 주세요: ");
         String name = scanner.nextLine().trim();
